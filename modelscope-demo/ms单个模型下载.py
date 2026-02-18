@@ -2,7 +2,7 @@ from modelscope import snapshot_download
 import os
 
 # 定义要保存的模型路径
-model_dir = './models'
+model_dir = '../models'
 
 # 如果目录不存在。则创建
 os.makedirs(model_dir, exist_ok=True)

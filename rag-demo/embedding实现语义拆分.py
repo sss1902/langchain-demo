@@ -19,7 +19,7 @@ print(sentences)  # ['RAG的关键在于检索。', '切分策略会影响召回
 # RAG的关键在于检索，切分策略会影响召回质量，如果切分太粗，检索会不准确，如果切分太细，信息有不够
 
 # 第二步 加载模型 判断
-model  = SentenceTransformer('../modelscope-demo/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
+model  = SentenceTransformer('../models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
 
 # 第三步 把每个句子变成向量
 embeddings = model.encode(sentences=sentences,convert_to_tensor=True)
