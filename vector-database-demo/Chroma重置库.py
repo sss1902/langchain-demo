@@ -9,10 +9,9 @@ vectordb = Chroma(persist_directory="./chroma_db",embedding_function=embedding_m
 
 all_datas = vectordb.get()
 print(f"----------------原数据-------------\n{all_datas}")
-# Chroma向量数据库的修改
-# --修改逻辑
-# ----不支持直接修改，要先删除后添加的逻辑
-vectordb.delete(ids=["q001"])
 
+
+# 向量库重置
+vectordb.reset_collection()
 new_all_datas = vectordb.get()
-print(f"----------------删除后的数据-------------\n{new_all_datas}")
+print(f"----------------重置后的数据库-------------\n{new_all_datas}")
